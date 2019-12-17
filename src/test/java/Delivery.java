@@ -28,7 +28,6 @@ public class Delivery {
 
     @Test
     void reserveDelivery2() {
-//        localDate = LocalDate.now();
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("[placeholder='Город']").setValue("Санкт-Петербург");
