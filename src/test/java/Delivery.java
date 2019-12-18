@@ -13,7 +13,7 @@ public class Delivery {
     LocalDate localDate = LocalDate.now();
 
     @Test
-    void reserveDelivery() {
+    void checkPositiveDate() {
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("[placeholder='Город']").setValue("Санкт-Петербург");
@@ -27,7 +27,7 @@ public class Delivery {
     }
 
     @Test
-    void reserveDelivery2() {
+    void checkNegativeDate() {
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("[placeholder='Город']").setValue("Санкт-Петербург");
